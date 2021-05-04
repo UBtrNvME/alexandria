@@ -15,13 +15,14 @@ TEST_DATA = [
 ]
 TEST_ID = [None] * len(TEST_DATA)
 
+
 def _get_db():
     client = MongoClient(host=HOST, port=int(PORT))
     return client["test"]
 
+
 testdb = _get_db()
 shelves = ShelfInterfaceMongo(testdb)
-
 
 
 class TestShelfInterfaceMongo(TestCase):
@@ -38,4 +39,8 @@ class TestShelfInterfaceMongo(TestCase):
 
     def test_get(self):
         res = shelves.get(TEST_ID[0])
-        self.assertEqual(TEST_ID[0], res["_id"], "get should return object with id equal to %s!" % TEST_ID[0])
+        self.assertEqual(
+            TEST_ID[0],
+            res["_id"],
+            "get should return object with id equal to %s!" % TEST_ID[0],
+        )
