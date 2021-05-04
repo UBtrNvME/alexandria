@@ -1,6 +1,8 @@
 from unittest import TestCase
-from alexandria.repository.mongodb import ShelfInterfaceMongo, Shelf
+
 from pymongo import MongoClient
+
+from alexandria.repository.mongodb import Shelf, ShelfInterfaceMongo
 from alexandria.utils.logger import logger
 
 logger.off = True
