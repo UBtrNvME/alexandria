@@ -6,6 +6,8 @@ authors = ["Aitemir Kuandyk <mooniron.k@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pymongo = "^3.11.3"
+pydantic = "^1.8.1"
 
 [tool.poetry.dev-dependencies]
 black = "^21.4b2"
