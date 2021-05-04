@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "alexandria"
+version = "0.1.0"
+description = "Alexandria|Great Library - a resource which can store all of the usefull information in the global net"
+authors = ["Aitemir Kuandyk <mooniron.k@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^21.4b2"
+isort = "^5.8.0"
+flake8 = "^3.9.1"
+pylint = "^2.8.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
